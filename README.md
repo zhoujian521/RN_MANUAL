@@ -1,10 +1,39 @@
 # React-Native 开发手册
 
 ## 技术栈
+01. `iOS => OC`
+02. `Android => java`
 01. `js=>jsx` / `ts=>tsx`
-02. 路由管理 `react-navigation` / `react-native-router-flux`
-03. 数据流管理 `react-redux` / `mobx`
+02. 路由管理
 
+    [react-navigation](https://www.npmjs.com/search?q=react-navigation)
+
+    [ReactNative 建议使用](https://reactnative.cn/docs/navigation#__docusaurus)
+
+    ```
+        react-navigation-stack
+        react-navigation-hooks
+        react-navigation-tabs
+    ```
+    [react-native-router-flux](https://www.npmjs.com/search?q=react-native-router-flux)
+    ```
+        react-native-router-flux
+    ```
+
+03. 数据流管理
+
+    [redux](https://github.com/reduxjs/redux)
+    ```
+        react-redux
+        redux-actions
+        redux-persist
+        redux-saga
+        reselect
+    ```
+    [mobx](https://github.com/mobxjs/mobx)
+    ```
+        mobx-react
+    ```
 ## Git 提交规范
 ---
 
@@ -34,6 +63,10 @@
   - T: Task
   - F: Feature
   - B: Bug
+
+- commit && push
+  - husky
+
 
 ## 项目结构
 
@@ -115,7 +148,6 @@
 `待定`
 
 ## 编程规约
-
 ---
 
 ### 01：iOS  
@@ -134,10 +166,26 @@
         003：js 文件
    ```
    02. component
-   ```
-        001：同一组件中包含多个组件
-   ```
-   03. fun
+        >PlanAAA      
+        >>index.js     
+        >>ComponentA.jsx      
+        >>ComponentB.jsx      
+
+        >PlanBBB      
+        >> ComponentA
+        >>> index.jsx      
+
+        >> ComponentB      
+            >>> index.jsx   
+
+        >PlanCCC 
+        >>ComponentA.jsx      
+        >>ComponentB.jsx      
+   03. fun 
+    ```
+        001：function
+        002：()=> 
+    ```
 2. style
     ``` 
         001：react-native-css
@@ -151,8 +199,7 @@
         003：const
     ```
 4. 代码格式 `eslint+prettier+editorconfig`
-5. 控制语句 
-6. 其他
+5. 其他
 
 ## 异常日志
 
